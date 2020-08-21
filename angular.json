@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Pruebacrudfinal"
+    }
+  },
+  "defaultProject": "Pruebacrudfinal",
+  "cli": {
+    "analytics": "c798aa4b-f04a-4d2d-8825-ed91d3c79b4c"
+  }
 }
