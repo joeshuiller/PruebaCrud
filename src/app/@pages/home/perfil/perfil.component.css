@@ -1,0 +1,27 @@
+.ajustesperfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section{
+    background-color: #ccf6e8!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 40px;
+}
+.ajustesperfil ul{
+    width: 100%;
+    background-color: #ffffff!important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    list-style: none;
+}
+.ajustesperfil ul li{
+   margin: 10px;
+   font-size: 20px;
+}

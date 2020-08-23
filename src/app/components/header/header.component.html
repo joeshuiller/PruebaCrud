@@ -1,0 +1,32 @@
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light final">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" [routerLink]="['/home/perfil']">Perfil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" [routerLink]="['/home/historial']">Mis solicitudes<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" (click)="cerrar()">Cerrar sesión<span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="datauser" *ngIf="countries1" >
+                <h1>Hola, {{countries1.nombre}} {{countries1.apellidos}}</h1>
+                <img class="rounded" src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+            </div>
+          </nav>
+    <img src="https://i.pinimg.com/originals/c2/08/d7/c208d7e6707704edaee4fc8a75f28c72.jpg" alt="">
+</header>

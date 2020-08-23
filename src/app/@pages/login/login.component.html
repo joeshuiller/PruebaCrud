@@ -1,0 +1,41 @@
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ajustesfinal">
+              <div class="content">
+                <form   [formGroup]="Form" (ngSubmit)="registrarForm(Form.value)">
+                    <img src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo</label>
+                        <input type="email" formControlName="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="validation-error" *ngIf="Form.get('correo').invalid">
+                          <div *ngFor="let validation of valdation_messages.correo">
+                            <div
+                              *ngIf="Form.get('correo').hasError(validation.type) && (Form.get('correo').dirty) || Form.get('correo').touched">
+                              {{validation.message}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Contraseña</label>
+                      <input type="password" formControlName="password" class="form-control">
+                      <div class="validation-error" *ngIf="Form.get('password').invalid">
+                        <div *ngFor="let validation of valdation_messages.password">
+                          <div
+                            *ngIf="Form.get('password').hasError(validation.type) && (Form.get('password').dirty) || Form.get('password').touched">
+                            {{validation.message}}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button  type="submit" class="btn btn-primary" [disabled]="Form.invalid" >Iniciar sesión</button><br>
+                </form>
+                <button [routerLink]="['/register']" class="btn btn-secondary" >Registrarse</button>
+              </div>
+            </div>
+        </div>
+
+    </div>
+</main>

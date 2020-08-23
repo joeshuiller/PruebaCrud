@@ -1,0 +1,36 @@
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ajustes">
+                <h1>Listado de solcitudes</h1>
+            </div>
+            <div class="col-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Acción</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of countries" >
+                        <th scope="row">{{item.id}}</th>
+                        <td *ngIf="item.state === 10" >Aprobado</td>
+                        <td *ngIf="item.state === 6" >No Aprobado</td>
+                        <td>{{item.date}}</td>
+                        <td>{{item.valor | number:'1.2-2'}}</td>
+                        <td>
+                            <button *ngIf="item.state !== 6 && item.active === 1" type="button" class="btn btn-success">Prestamo cancelado</button>
+                            <button *ngIf="item.state !== 6 && item.active === 0" type="button" class="btn btn-danger">Pagar prestamo</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

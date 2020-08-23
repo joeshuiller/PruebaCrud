@@ -1,0 +1,16 @@
+header img{
+    width: 100%;
+}
+.datauser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.datauser img{
+    width: 100px;
+}
+.datauser h1{
+   margin-bottom: 0;
+   margin-right: 10px;
+}

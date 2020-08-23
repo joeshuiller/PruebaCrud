@@ -1,0 +1,20 @@
+section{
+    background-color: #ccf6e8!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.asignadovalor{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+}
+.asignadovalor h1{
+    color: #ffffff;
+    font-size: 20px;
+    width: 200px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}

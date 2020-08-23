@@ -1,0 +1,15 @@
+.ajustes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.finaloklisto h1{
+    color: #ffffff;
+    font-size: 20px;
+    width: 50%;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}

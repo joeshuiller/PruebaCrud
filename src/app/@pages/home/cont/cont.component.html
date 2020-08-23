@@ -1,0 +1,13 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 asignadovalor">
+                <h1>Cupo asignado: ${{(cupodisponible-aprobado)| number:'1.2-2'}}</h1>
+            </div>
+            <div class="col-12">
+                <h1>Solicita tu prestamo</h1>
+                <app-prestamos (eventoComunicar)="realizaComunicacionHijo($event)" [active]="active"></app-prestamos>
+            </div>
+        </div>
+    </div>
+</section>

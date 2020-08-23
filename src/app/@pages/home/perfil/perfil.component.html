@@ -1,0 +1,17 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ajustesperfil" *ngIf="countries1" >
+                <h1>Perfil</h1>
+                <ul>
+                    <li><strong>Nombre:</strong>  {{countries1.nombre}}</li>
+                    <li><strong>Apellidos:</strong> {{countries1.apellidos}}</li>
+                    <li><strong>No. de cedula:</strong> {{countries1.cedula}}</li>
+                    <li><strong>Correo:</strong> {{countries1.email}}</li>
+                    <li><strong>Teléfono:</strong> {{countries1.telefono}}</li>
+                </ul>
+                <button class="btn btn-warning" (click)="cerrar()">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+</section>

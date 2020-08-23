@@ -1,0 +1,23 @@
+form{
+    padding: 20px;
+}
+.ajustesfinales{
+    justify-content: space-around;
+    align-items: flex-start ;
+}
+.final {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 17px;
+    border-radius: 11px;
+}
+@media (max-width: 600px) {
+    .col-6 {
+      max-width: 100%;
+      width: 100%;
+    }
+    .row{
+        flex-direction: column;
+        flex-wrap: initial;
+    }
+}

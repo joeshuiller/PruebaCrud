@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "json-server",
+      "apellidos": "typicode",
+      "cedula": 1046427232,
+      "direccion": "typicode",
+      "telefono": 3138160454,
+      "email": "janes_saenz@hotmail.com",
+      "password": "658ff507e199d4fa6f65d1beba0ca605",
+      "token": "57533b37e62ee331b9715038e5c2e3f7",
+      "tipo": 2
+    },
+    {
+      "tipo": 1,
+      "token": "c2f4d28bc845987ccd83a7069380a055",
+      "nombre": "Prueba ",
+      "apellidos": "estamos haciendo pruebas ",
+      "cedula": 125316126,
+      "direccion": "dsgtreyer",
+      "email": "janes_saenzfinal@hotmail.com",
+      "telefono": 2352525236,
+      "password": "658ff507e199d4fa6f65d1beba0ca605",
+      "id": 2
+    }
+  ],
+  "solicitud": [
+    {
+      "id": 1,
+      "idusers": 1,
+      "valor": 13253,
+      "state": 10,
+      "date": "2020-31-12",
+      "active": 1
+    },
+    {
+      "idusers": 1,
+      "valor": 167674,
+      "state": 6,
+      "date": "2020-08-23",
+      "active": 0,
+      "id": 3
+    },
+    {
+      "idusers": 1,
+      "valor": 167674,
+      "state": 6,
+      "date": "2020-08-23",
+      "active": 0,
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

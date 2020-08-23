@@ -1,0 +1,38 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ajustes">
+                <h1>Listado de solcitudes</h1>
+            </div>
+            <div class="col-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">No. de cedula</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Teléfono</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of users" >
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.apellidos}}</td>
+                        <td>{{item.cedula}}</td>
+                        <td>
+                            {{item.email}}
+                        </td>
+                        <td>{{item.direccion}}</td>
+                        <td>{{item.telefono}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'http://127.0.0.1:8000/api/auth/'
+  capital: 1000000,
+  api: 'http://localhost:3000/'
 };
 
 /*

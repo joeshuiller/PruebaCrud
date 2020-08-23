@@ -1,0 +1,54 @@
+<div class="row ajustesfinales" *ngIf="!active" >
+    <div class="col-5 final ">
+        <form [formGroup]="Form" (ngSubmit)="registrarForm(Form.value)">
+            <img src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+            <h1>CALCULA TU CRÉDITO</h1>
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Cuánto dinero necesitas?</label>
+                <input type="text" formControlName="valor" disabled  [value]="Form.controls.calulo.value | number:'1.2-2'" class="form-control" id="exampleInputEmail1">
+                <b>$ 10.000</b> <input type="range" min="10000" max="100000" formControlName="calulo" value="0" class="slider" id="myRange"> <b>$ 100.000</b>
+                <div class="validation-error" *ngIf="Form.get('calulo').invalid">
+                    <div *ngFor="let validation of valdation_messages.calulo">
+                      <div
+                        *ngIf="Form.get('calulo').hasError(validation.type) && (Form.get('calulo').dirty) || Form.get('calulo').touched">
+                        {{validation.message}}
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">¿Cuándo puedes pagarnos? (en 30 días)</label>
+                <input type="date"  formControlName="fecha" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div class="validation-error" *ngIf="Form.get('fecha').invalid">
+                    <div *ngFor="let validation of valdation_messages.fecha">
+                      <div
+                        *ngIf="Form.get('fecha').hasError(validation.type) && (Form.get('fecha').dirty) || Form.get('fecha').touched">
+                        {{validation.message}}
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <button  type="submit" class="btn btn-primary" [disabled]="Form.invalid" >Solicitar</button><br>
+        </form>
+    </div>
+    <div class="col-5 final ">
+        <img src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+        <br>
+       <h1>LAS CUENTAS CLARAS. VALORES A PAGAR</h1>
+       <br>
+       <ul>
+           <li><strong>Valor solicitado: </strong>{{Form.controls.calulo.value | number:'1.2-2'}}</li>
+           <li><strong>Interés(25% E.A): </strong>{{((Form.controls.calulo.value*interes)/100)| number:'1.2-2'}}</li>
+           <li><strong>Seguro: </strong>{{seguro| number:'1.2-2'}}</li>
+           <li><strong>Administración: </strong>{{admin| number:'1.2-2'}}</li>
+       </ul>
+       <ul>
+            <li><strong>Subtotal: </strong>${{(Form.controls.calulo.value+seguro+admin + ((Form.controls.calulo.value*interes)/100))| number:'1.2-2'}}</li>
+            <li><strong>Tecnologia(25% E.A): </strong>${{tecnolo| number:'1.2-2'}}</li>
+            <li><strong>IVA: </strong>${{((Form.controls.calulo.value*19)/100)| number:'1.2-2'}}</li>
+        </ul>
+        <ul>
+            <li><strong>TOTAL A PAGAR: </strong>${{(Form.controls.calulo.value+seguro+admin + ((Form.controls.calulo.value*interes)/100)+tecnolo+((Form.controls.calulo.value*19)/100))| number:'1.2-2'}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ajustesfinal">
+                <div class="content">
+                    <form   [formGroup]="Form" (ngSubmit)="registrarForm(Form.value)">
+                        <img src="https://www.zinobe.com/assets/img/logo.svg" alt="">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nombre</label>
+                            <input type="text" formControlName="nombre" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('nombre').invalid">
+                              <div *ngFor="let validation of valdation_messages.nombre">
+                                <div
+                                  *ngIf="Form.get('nombre').hasError(validation.type) && (Form.get('nombre').dirty) || Form.get('nombre').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Apellidos</label>
+                            <input type="text" formControlName="apellidos" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('apellidos').invalid">
+                              <div *ngFor="let validation of valdation_messages.apellidos">
+                                <div
+                                  *ngIf="Form.get('apellidos').hasError(validation.type) && (Form.get('apellidos').dirty) || Form.get('apellidos').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">No. de cédula</label>
+                            <input type="number" formControlName="cedula" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('cedula').invalid">
+                              <div *ngFor="let validation of valdation_messages.cedula">
+                                <div
+                                  *ngIf="Form.get('cedula').hasError(validation.type) && (Form.get('cedula').dirty) || Form.get('cedula').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Dirección</label>
+                            <input type="text" formControlName="direccion" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('direccion').invalid">
+                              <div *ngFor="let validation of valdation_messages.direccion">
+                                <div
+                                  *ngIf="Form.get('direccion').hasError(validation.type) && (Form.get('direccion').dirty) || Form.get('direccion').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Teléfono</label>
+                            <input type="number" formControlName="telefono" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('telefono').invalid">
+                              <div *ngFor="let validation of valdation_messages.telefono">
+                                <div
+                                  *ngIf="Form.get('telefono').hasError(validation.type) && (Form.get('telefono').dirty) || Form.get('telefono').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo</label>
+                            <input type="email" formControlName="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div class="validation-error" *ngIf="Form.get('correo').invalid">
+                              <div *ngFor="let validation of valdation_messages.correo">
+                                <div
+                                  *ngIf="Form.get('correo').hasError(validation.type) && (Form.get('correo').dirty) || Form.get('correo').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Contraseña</label>
+                          <input type="password" formControlName="password" class="form-control">
+                          <div class="validation-error" *ngIf="Form.get('password').invalid">
+                            <div *ngFor="let validation of valdation_messages.password">
+                              <div
+                                *ngIf="Form.get('password').hasError(validation.type) && (Form.get('password').dirty) || Form.get('password').touched">
+                                {{validation.message}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Repetir la contraseña</label>
+                            <input type="password" formControlName="passwordreplay" class="form-control">
+                            <div class="validation-error" *ngIf="Form.get('passwordreplay').invalid">
+                              <div *ngFor="let validation of valdation_messages.passwordreplay">
+                                <div
+                                  *ngIf="Form.get('passwordreplay').hasError(validation.type) && (Form.get('passwordreplay').dirty) || Form.get('passwordreplay').touched">
+                                  {{validation.message}}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <button  type="submit" class="btn btn-primary" [disabled]="Form.invalid" >Registrarse</button><br>
+                    </form>
+                    <button [routerLink]="['/login']" class="btn btn-secondary" >Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
