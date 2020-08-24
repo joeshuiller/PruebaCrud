@@ -33,6 +33,7 @@ export class ListcloseComponent implements OnInit {
                 valor: element.valor,
                 state: element.state,
                 date:element.date,
+                datepago:element.datepago,
                 active:element.active,
                 nombre:el.nombre,
                 apellidos:el.apellidos,

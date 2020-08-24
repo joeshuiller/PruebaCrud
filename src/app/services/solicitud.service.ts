@@ -13,17 +13,19 @@ export class SolicitudService {
       valor: inform.calculo,
       state: inform.tope,
       date:inform.date,
+      datepago:"",
       active:0,
     };
     return await this.registeresquest.POST('solicitud', data)
   }
   async edituser(inform, id){
     const data = {
-      nombre: inform.nombre,
-      apellidos: inform.apellidos,
-      direccion:inform.direccion,
-      correo:inform.correo,
-      telefono:inform.telefono
+      idusers: inform.idusers,
+      valor: inform.valor,
+      state: inform.state,
+      date:inform.date,
+      datepago:new Date(),
+      active:1,
     };
     return await this.registeresquest.PUT(`solicitud/${id}`, data)
   }
@@ -35,6 +37,9 @@ export class SolicitudService {
   }
   async getcrudstotal(){
     return await this.registeresquest.GET(`solicitud`)
+  }
+  async verificaregistrofinal(){
+    return await this.registeresquest.GET(`solicitud?active=0&state=10`)
   }
   async deletecruds(id){
     return await this.registeresquest.DELETE(`users/${id}`)

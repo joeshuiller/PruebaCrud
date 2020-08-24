@@ -25,7 +25,7 @@
                         <td>{{item.valor | number:'1.2-2'}}</td>
                         <td>
                             <button *ngIf="item.state !== 6 && item.active === 1" type="button" class="btn btn-success">Prestamo cancelado</button>
-                            <button *ngIf="item.state !== 6 && item.active === 0" type="button" class="btn btn-danger">Pagar prestamo</button>
+                            <button *ngIf="item.state !== 6 && item.active === 0" type="button" class="btn btn-danger" (click)="pagarcredito(item)">Pagar prestamo</button>
                         </td>
                       </tr>
                     </tbody>

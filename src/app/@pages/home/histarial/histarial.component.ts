@@ -31,4 +31,15 @@ export class HistarialComponent implements OnInit {
       }
     );
   }
+  async pagarcredito(item){
+    (await this.http.edituser(item, item.id)).subscribe(
+      (res)=>{
+       console.log(res);
+        this.countries = res
+      }, 
+      (error)=>{
+        console.log(error);
+      }
+    );
+  }
 }

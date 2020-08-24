@@ -32,7 +32,8 @@
       "valor": 13253,
       "state": 10,
       "date": "2020-31-12",
-      "active": 1
+      "active": 1,
+      "datepago": "2020-31-12"
     },
     {
       "idusers": 1,
@@ -40,15 +41,86 @@
       "state": 6,
       "date": "2020-08-23",
       "active": 0,
+      "datepago": "",
       "id": 3
     },
     {
       "idusers": 1,
       "valor": 167674,
-      "state": 6,
+      "state": 10,
       "date": "2020-08-23",
-      "active": 0,
+      "datepago": "2020-08-24T00:19:24.582Z",
+      "active": 1,
       "id": 4
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-09-23",
+      "datepago": "2020-08-24T00:00:26.955Z",
+      "active": 1,
+      "id": 5
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-09-23",
+      "datepago": "2020-08-24T00:21:00.051Z",
+      "active": 1,
+      "id": 6
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-08-23",
+      "datepago": "2020-08-24T00:20:12.305Z",
+      "active": 1,
+      "id": 7
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-08-23",
+      "datepago": "2020-08-24T00:21:01.153Z",
+      "active": 1,
+      "id": 8
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-08-23",
+      "datepago": "2020-08-24T00:21:01.985Z",
+      "active": 1,
+      "id": 9
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "aprobado": 100000,
+      "state": 10,
+      "date": "2020-08-23",
+      "datepago": "2020-08-24T00:20:14.487Z",
+      "active": 1,
+      "id": 10
+    },
+    {
+      "idusers": 2,
+      "valor": 167674,
+      "state": 10,
+      "date": "2020-09-23",
+      "datepago": "",
+      "active": 0,
+      "id": 11
     }
   ],
   "profile": {

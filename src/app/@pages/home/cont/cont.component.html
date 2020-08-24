@@ -6,7 +6,7 @@
             </div>
             <div class="col-12">
                 <h1>Solicita tu prestamo</h1>
-                <app-prestamos (eventoComunicar)="realizaComunicacionHijo($event)" [active]="active"></app-prestamos>
+                <app-prestamos (eventoComunicar)="realizaComunicacionHijo($event)" [active]="active" (pagoComunicar)="pagarcredito($event)"></app-prestamos>
             </div>
         </div>
     </div>

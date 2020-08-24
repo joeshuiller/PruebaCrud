@@ -18,11 +18,13 @@ export class ContComponent implements OnInit {
   id:string;
   cupodisponible: number= 100000
   aprobado:number = 0;
+  virificar:any;
   constructor(private http:SolicitudService,
-    private alert: AlertService) { }
+    private alert: AlertService,) { }
 
   ngOnInit(): void {
     this.id = localStorage.getItem('id');
+    this.getactivo();
   }
   realizarComunicacion(dato: string) {
     this.datoComunicar = dato;
@@ -48,6 +50,7 @@ export class ContComponent implements OnInit {
       (res)=>{
        console.log(res);
         this.countries = res
+        console.log(this.countries.length)
         if (this.countries.length === 0) {
             this.create(this.datoComunicarPadre);
         }else{
@@ -67,7 +70,7 @@ export class ContComponent implements OnInit {
               tope: 10,
               aprobado: this.datoComunicarPadre.aprobado,
             }
-            this.create(this.datoComunicarPadre);
+            this.create(data);
           }
         }
        
@@ -88,9 +91,42 @@ export class ContComponent implements OnInit {
         }else{
             this.aprobado = item.aprobado;
             this.active=true;
-            this.alert.error("Felicitaciones!","Tu credito  ha sido aprobado")
+            this.alert.success("Felicitaciones!","Tu credito  ha sido aprobado")
         }
        
+      }, 
+      (error)=>{
+        console.log(error);
+      }
+    );
+  }
+  async pagarcredito(item){
+    this.alert.loading();
+    (await this.http.edituser(this.virificar[0], this.virificar[0].id)).subscribe(
+      (res)=>{
+       console.log(res);
+       this.getactivo();
+        this.countries = res
+        this.alert.success("Felicitaciones!","Tu credito  ha sido cancelado con exito")
+      }, 
+      (error)=>{
+        this.alert.error("Lo sentimos!","Lo sentimo tu credito no ha sido cancelado")
+        console.log(error);
+      }
+    );
+  }
+  async getactivo(){
+    (await this.http.verificaregistrofinal()).subscribe(
+      (res)=>{
+       console.log(res);
+        this.virificar = res
+        if (this.virificar.length === 0) {
+          this.active = false
+          this.aprobado = 0
+        } else {
+          this.aprobado = this.virificar[0].aprobado
+          this.active = true
+        }
       }, 
       (error)=>{
         console.log(error);

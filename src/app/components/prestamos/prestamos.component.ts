@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PrestamosComponent implements OnInit {
   @Output() eventoComunicar = new EventEmitter();
+  @Output() pagoComunicar = new EventEmitter();
   @Input() active: boolean;
   interes:number = 2;
   seguro:number = 674;
@@ -83,5 +84,8 @@ export class PrestamosComponent implements OnInit {
       this.realizarComunicacion(data);
     }
     
+  }
+  pagarcredito(){
+    this.pagoComunicar.emit({elemento: 'pagar'});;
   }
 }
